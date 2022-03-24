@@ -1,6 +1,7 @@
 import React from 'react'
 import NasaDatePicker from './NasaDatepicker'
 import styled from 'styled-components'
+import { UncontrolledAlert } from 'reactstrap'
 
 const StyledDatePicker = styled.div`
 .datepicker-react {
@@ -36,13 +37,18 @@ const HeadContainer = (props) => {
     return (
         <div className="head-container">
             <StyledHeader>
-            <img className="nasa-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" />
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">NASA API</a>
-            <StyledDatePicker className="datepicker-react">
-                <NasaDatePicker className="nasa-nav-bar" startDate={props.startDate} setStartDate={props.setStartDate} />
-            </StyledDatePicker>
+                <img className="nasa-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" />
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">NASA API</a>
+                <StyledDatePicker className="datepicker-react">
+                    <div>
+                        <UncontrolledAlert color="secondary">
+                            Choose a different date!
+                        </UncontrolledAlert>
+                    </div>
+                    <NasaDatePicker className="nasa-nav-bar" startDate={props.startDate} setStartDate={props.setStartDate} />
+                </StyledDatePicker>
             </StyledHeader>
-            </div>
+        </div>
     );
 };
 
