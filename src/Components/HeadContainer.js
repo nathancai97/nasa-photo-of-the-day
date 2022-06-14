@@ -20,15 +20,12 @@ const StyledHeader = styled.div`
     margin-left: 5%;
   }
   
-  .nav-bar a {
-    display:flex;
-    margin-left: 90%;
-  }
-
   a {
       display: flex;
       justify-content: flex-end;
       margin-right: 5%;
+      align-items: center;
+      flex-direction: row;
   }
 
   `
@@ -38,7 +35,7 @@ const HeadContainer = (props) => {
         <div className="head-container">
             <StyledHeader>
                 <img className="nasa-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" />
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">NASA API</a>
+                <a href="https://api.nasa.gov/">NASA API</a>
                 <StyledDatePicker className="datepicker-react">
                     <div>
                         <UncontrolledAlert color="secondary">
