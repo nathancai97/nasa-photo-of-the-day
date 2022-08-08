@@ -1,1 +1,1 @@
-
+This is a single page application showcasing NASA's photo of the day and their API using React and Axios. I have implemented a unique calendar that allows users to fetch the NASA API to find the photo corresponding to the date chosen on the calendar. In the future, I would like to update the design similar to what the official NASA website looks like! 
